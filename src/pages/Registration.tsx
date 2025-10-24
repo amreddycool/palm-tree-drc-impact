@@ -59,13 +59,29 @@ const Registration = () => {
   });
 
   const onAttendeeSubmit = (data: AttendeeFormData) => {
-    // Here you would typically send data to your backend
+    
+    
+
+    fetch("https://palmtreewomen.com/email-api", {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify(data)
+    }).then(response => response.json())
+    .then(responseJson => {
+      toast({
+        title: "Registration Submitted!",
+        description: `Thank you ${data.firstName}! We'll send confirmation details to ${data.email}`,
+      });
+      attendeeForm.reset();
+    })
     toast({
-      title: "Registration Submitted!",
-      description: `Thank you ${data.firstName}! We'll send confirmation details to ${data.email}`,
-    });
-    attendeeForm.reset();
+        title: "Registration Submition Failed!",
+        description: "Aplogogies! Could not process your registration at this time. Please contact us directly.",
+      });
+    // Success 
+
   };
+
 
   const onSponsorSubmit = (data: SponsorFormData) => {
     // Here you would typically send data to your backend
@@ -75,11 +91,25 @@ const Registration = () => {
       platinum: "£2,999",
       diamond: "£4,999",
     };
+    
+    
+
+     fetch("https://palmtreewomen.com/email-api", {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify(data)
+    }).then(response => response.json())
+    .then(responseJson => {
+      toast({
+        title: "Sponsorship Application Submitted!",
+        description: `Thank you for your interest in ${data.sponsorshipTier} sponsorship (${tierPrices[data.sponsorshipTier]}). We'll contact you at ${data.email}`,
+      });
+      sponsorForm.reset();
+    })
     toast({
-      title: "Sponsorship Application Submitted!",
-      description: `Thank you for your interest in ${data.sponsorshipTier} sponsorship (${tierPrices[data.sponsorshipTier]}). We'll contact you at ${data.email}`,
-    });
-    sponsorForm.reset();
+        title: "Sponsorship Application  Failed!",
+        description: "Aplogogies! Could not process your Sponsorship Application at this time. Please contact us directly.",
+      });
   };
 
   const sponsorshipTiers = [
