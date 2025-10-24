@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import heroImage from "@/assets/hero-image.jpg";
 
 const Events = () => {
   const navigate = useNavigate();
@@ -57,6 +58,7 @@ const Events = () => {
       <Header />
       
       {/* Hero Section */}
+      
       <section className="bg-gradient-to-br from-primary to-primary/80 text-primary-foreground py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -81,7 +83,6 @@ const Events = () => {
           </div>
         </div>
       </section>
-
       {/* About Conference */}
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">

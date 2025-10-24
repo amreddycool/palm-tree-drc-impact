@@ -13,6 +13,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { UserCircle, Building2 } from "lucide-react";
+import { Turnstile } from '@marsidev/react-turnstile'
 
 const attendeeSchema = z.object({
   firstName: z.string().trim().min(1, "First name is required").max(100, "First name must be less than 100 characters"),
@@ -23,6 +24,7 @@ const attendeeSchema = z.object({
   jobTitle: z.string().trim().min(1, "Job title is required").max(150, "Job title must be less than 150 characters"),
   country: z.string().trim().min(1, "Country is required").max(100, "Country must be less than 100 characters"),
   dietaryRequirements: z.string().trim().max(500, "Dietary requirements must be less than 500 characters").optional(),
+  verfication: z.string().trim().min(1, "Verification is required"),
 });
 
 const sponsorSchema = z.object({
@@ -38,6 +40,7 @@ const sponsorSchema = z.object({
   }),
   companyDescription: z.string().trim().min(50, "Description must be at least 50 characters").max(1000, "Description must be less than 1000 characters"),
   marketingMessage: z.string().trim().max(500, "Marketing message must be less than 500 characters").optional(),
+  verfication: z.string().trim().min(1, "Verification is required"),
 });
 
 type AttendeeFormData = z.infer<typeof attendeeSchema>;
@@ -268,6 +271,7 @@ const Registration = () => {
                     </div>
 
                     <div className="pt-4">
+                      <Turnstile siteKey="0x4AAAAAAB8Ox-UO-5iMBVuG" onSuccess={()=> attendeeForm.setValue("verfication", "true")}/>
                       <Button type="submit" size="lg" className="w-full">
                         Submit Registration - £499
                       </Button>
@@ -448,6 +452,8 @@ const Registration = () => {
                     </div>
 
                     <div className="pt-4">
+                      <Turnstile siteKey="0x4AAAAAAB8Ox-UO-5iMBVuG" onSuccess={()=> sponsorForm.setValue("verfication", "true")}/>
+                
                       <Button type="submit" size="lg" className="w-full">
                         Submit Sponsorship Application
                       </Button>
