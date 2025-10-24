@@ -1,10 +1,13 @@
 import { Calendar, MapPin, Clock, Users, Utensils, Building2 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 const Events = () => {
+  const navigate = useNavigate();
+
   const sponsorshipTiers = [
     {
       name: "Silver",
@@ -151,7 +154,7 @@ const Events = () => {
                   </div>
                 </div>
                 <div className="mt-8 text-center">
-                  <Button size="lg" className="w-full md:w-auto px-12">
+                  <Button size="lg" className="w-full md:w-auto px-12" onClick={() => navigate("/registration")}>
                     Register Now
                   </Button>
                 </div>
@@ -196,6 +199,7 @@ const Events = () => {
                     <Button 
                       className="w-full mt-6" 
                       variant={tier.exclusive ? "default" : "outline"}
+                      onClick={() => navigate("/registration")}
                     >
                       Become a Sponsor
                     </Button>
@@ -215,10 +219,10 @@ const Events = () => {
             Don't miss this opportunity to connect with industry leaders, explore investment opportunities, and expand your business network.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" className="px-8">
+            <Button size="lg" variant="secondary" className="px-8" onClick={() => navigate("/registration")}>
               Register for Conference
             </Button>
-            <Button size="lg" variant="outline" className="px-8 bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+            <Button size="lg" variant="outline" className="px-8 bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary" onClick={() => navigate("/registration")}>
               Inquire About Sponsorship
             </Button>
           </div>
