@@ -33,7 +33,7 @@ const Footer = () => {
           </p>
           <p className="text-sm opacity-75 mt-2">
             <div>
-              <a href="https://palmtreewomen.com" className="underline hover:text-secondary transition-colors">https://palmtreewomen.com</a>
+              <a href="https://palmtreewomen.com" className="underline hover:text-secondary transition-colors">https://universalpalmtreewomen.com</a>
             
               
             </div>
