@@ -1,13 +1,28 @@
-import logo from "@/assets/logo.png";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    element?.scrollIntoView({ behavior: "smooth" });
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        element?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    } else {
+      const element = document.getElementById(sectionId);
+      element?.scrollIntoView({ behavior: "smooth" });
+    }
+    setIsMenuOpen(false);
+  };
+
+  const handleNavigation = (path: string) => {
+    navigate(path);
     setIsMenuOpen(false);
   };
 
@@ -23,12 +38,12 @@ const Header = () => {
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <img 
-              src={logo} 
-              alt="Universal Palm Tree Women Logo" 
-              className="h-12 md:h-16 w-auto cursor-pointer"
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            />
+            <h1 
+              className="text-xl md:text-2xl font-bold text-foreground cursor-pointer"
+              onClick={() => handleNavigation("/")}
+            >
+              Universal Palm Tree Women
+            </h1>
           </div>
 
           {/* Desktop Menu */}
@@ -42,6 +57,12 @@ const Header = () => {
                 {item.label}
               </button>
             ))}
+            <button
+              onClick={() => handleNavigation("/events")}
+              className="text-foreground hover:text-primary transition-colors font-medium"
+            >
+              Events
+            </button>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -67,6 +88,12 @@ const Header = () => {
                   {item.label}
                 </button>
               ))}
+              <button
+                onClick={() => handleNavigation("/events")}
+                className="text-foreground hover:text-primary transition-colors font-medium text-left"
+              >
+                Events
+              </button>
             </div>
           </nav>
         )}
