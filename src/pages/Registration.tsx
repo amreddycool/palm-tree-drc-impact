@@ -72,7 +72,7 @@ const Registration = () => {
         title: "Registration Submitted!",
         description: `Thank you ${data.firstName}! We'll send confirmation details to ${data.email}`,
       });
-      attendeeForm.reset();
+      //attendeeForm.reset();
     })
     toast({
         title: "Registration Submition Failed!",
