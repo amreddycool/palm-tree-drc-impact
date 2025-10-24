@@ -1,6 +1,7 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
+import logo from "@/assets/logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -38,12 +39,12 @@ const Header = () => {
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <h1 
-              className="text-xl md:text-2xl font-bold text-foreground cursor-pointer"
+            <img 
+              src={logo} 
+              alt="Universal Palm Tree Women" 
+              className="h-12 cursor-pointer"
               onClick={() => handleNavigation("/")}
-            >
-              Universal Palm Tree Women
-            </h1>
+            />
           </div>
 
           {/* Desktop Menu */}
