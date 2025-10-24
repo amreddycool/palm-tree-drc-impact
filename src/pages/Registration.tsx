@@ -24,6 +24,7 @@ const attendeeSchema = z.object({
   jobTitle: z.string().trim().min(1, "Job title is required").max(150, "Job title must be less than 150 characters"),
   country: z.string().trim().min(1, "Country is required").max(100, "Country must be less than 100 characters"),
   dietaryRequirements: z.string().trim().max(500, "Dietary requirements must be less than 500 characters").optional(),
+  subject: z.string().trim().optional(),
   verfication: z.string().trim().min(1, "Verification is required"),
 });
 
@@ -40,6 +41,7 @@ const sponsorSchema = z.object({
   }),
   companyDescription: z.string().trim().min(50, "Description must be at least 50 characters").max(1000, "Description must be less than 1000 characters"),
   marketingMessage: z.string().trim().max(500, "Marketing message must be less than 500 characters").optional(),
+  subject: z.string().trim().optional(),
   verfication: z.string().trim().min(1, "Verification is required"),
 });
 
@@ -60,7 +62,7 @@ const Registration = () => {
 
   const onAttendeeSubmit = (data: AttendeeFormData) => {
     
-    
+    data.subject = `Conference Registration - ${data.firstName} ${data.lastName}`;
 
     fetch("https://palmtreewomen.com/email-api", {
       method: "POST",
@@ -92,7 +94,7 @@ const Registration = () => {
       diamond: "£4,999",
     };
     
-    
+    data.subject= `Sponsorship Application - ${data.companyName} (${data.sponsorshipTier} - ${tierPrices[data.sponsorshipTier]}`;
 
      fetch("https://palmtreewomen.com/email-api", {
       method: "POST",
