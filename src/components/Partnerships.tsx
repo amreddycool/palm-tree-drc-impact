@@ -34,10 +34,10 @@ const Partnerships = () => {
                 <Building2 className="w-8 h-8 text-secondary" />
               </div>
               <h3 className="text-2xl font-bold mb-3 text-foreground">
-                DRC Government
+                DRC Government Representatives
               </h3>
               <p className="text-muted-foreground">
-                Partnering with government agencies on strategic projects that promote economic 
+                Partnering with government representatives of agencies on strategic projects that promote economic 
                 development, infrastructure growth, and improved quality of life for citizens.
               </p>
             </CardContent>
