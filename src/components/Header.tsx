@@ -34,6 +34,11 @@ const Header = () => {
     { label: "Contact", section: "contact" },
   ];
 
+  const pageLinks = [
+    { label: "Events", path: "/events" },
+    { label: "Team", path: "/team" },
+  ];
+
   return (
     <header className="bg-card/80 border-b border-border sticky top-0 z-50 backdrop-blur-md shadow-sm">
       <div className="container mx-auto px-4 py-3">
@@ -58,12 +63,15 @@ const Header = () => {
                 {item.label}
               </button>
             ))}
-            <button
-              onClick={() => handleNavigation("/events")}
-              className="text-foreground hover:text-primary transition-colors font-medium"
-            >
-              Events
-            </button>
+            {pageLinks.map((link) => (
+              <button
+                key={link.path}
+                onClick={() => handleNavigation(link.path)}
+                className="text-foreground hover:text-primary transition-colors font-medium"
+              >
+                {link.label}
+              </button>
+            ))}
           </nav>
 
           {/* Mobile Menu Button */}
@@ -89,12 +97,15 @@ const Header = () => {
                   {item.label}
                 </button>
               ))}
-              <button
-                onClick={() => handleNavigation("/events")}
-                className="text-foreground hover:text-primary transition-colors font-medium text-left"
-              >
-                Events
-              </button>
+              {pageLinks.map((link) => (
+                <button
+                  key={link.path}
+                  onClick={() => handleNavigation(link.path)}
+                  className="text-foreground hover:text-primary transition-colors font-medium text-left"
+                >
+                  {link.label}
+                </button>
+              ))}
             </div>
           </nav>
         )}
