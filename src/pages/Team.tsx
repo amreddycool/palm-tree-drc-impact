@@ -22,12 +22,12 @@ const Team = () => {
       image: ceoUsa,
     },
     {
-      name: "Co-Founder, CEO",
+      name: "Madhava Reddy, Co-Founder, CEO",
       organization: "UPTW UK LTD",
       image: ceoUk,
     },
     {
-      name: "Co-Founder, COO",
+      name: "Venkata Reddy, Co-Founder, COO",
       organization: "UPTW UK LTD",
       image: cooUk,
     },
