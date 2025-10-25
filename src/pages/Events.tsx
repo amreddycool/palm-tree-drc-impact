@@ -5,6 +5,9 @@ import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-image.jpg";
+import speakerDrcAmbassador from "@/assets/speaker-drc-ambassador.jpg";
+import speakerUkAmbassador from "@/assets/speaker-uk-ambassador.jpg";
+import speakerForeignMinister from "@/assets/speaker-foreign-minister.jpg";
 
 const Events = () => {
   const navigate = useNavigate();
@@ -100,8 +103,64 @@ const Events = () => {
         </div>
       </section>
 
-      {/* Focus Areas */}
+      {/* Chief Guest Speakers */}
       <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12 text-center">Chief Guest Speakers</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <div className="aspect-square mb-4 overflow-hidden rounded-lg">
+                  <img 
+                    src={speakerDrcAmbassador} 
+                    alt="DRC Ambassador to UK" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <CardTitle className="mb-2">DRC Ambassador to UK</CardTitle>
+                <CardDescription className="text-base">
+                  His Excellency will share insights on bilateral trade relations and investment opportunities between the Democratic Republic of Congo and the United Kingdom.
+                </CardDescription>
+              </CardContent>
+            </Card>
+            
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <div className="aspect-square mb-4 overflow-hidden rounded-lg">
+                  <img 
+                    src={speakerUkAmbassador} 
+                    alt="UK Ambassador to DRC" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <CardTitle className="mb-2">UK Ambassador to DRC</CardTitle>
+                <CardDescription className="text-base">
+                  His Excellency will discuss the UK's commitment to strengthening economic partnerships and fostering sustainable development in the DRC.
+                </CardDescription>
+              </CardContent>
+            </Card>
+            
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <div className="aspect-square mb-4 overflow-hidden rounded-lg">
+                  <img 
+                    src={speakerForeignMinister} 
+                    alt="Foreign Minister of DRC" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <CardTitle className="mb-2">Foreign Minister of DRC</CardTitle>
+                <CardDescription className="text-base">
+                  The Honorable Minister will present the DRC's strategic vision for international trade and outline key investment opportunities across various sectors.
+                </CardDescription>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Focus Areas */}
+      <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12 text-center">Trade / Investment Focus Areas</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
