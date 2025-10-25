@@ -14,24 +14,24 @@ import directorAus from "@/assets/team-director-aus.jpg";
 const Team = () => {
   const teamMembers = [
     {
-      name: "Founder, CEO",
-      organization: "UPTW DRC NGO",
+      name: "Dr Tiabakueno S. Élie, Founder, CEO",
+      organization: "UPTW DRC SAS",
       image: ceoDrc,
     },
     {
-      name: "Founder, CEO",
-      organization: "UPTW DRC NGO",
+      name: "Dr Eunice kienzi Munday, Director",
+      organization: "UPTW DRC SAS",
       image: directorDrc,
     },
     {
-      name: "Founder, CEO",
-      organization: "UPTW USA LLC",
-      image: ceoUsa,
-    },
-    {
-      name: "Madhava Reddy, Co-Founder, CEO",
+      name: "Madhava Reddy, Founder, CEO",
       organization: "UPTW UK LTD",
       image: ceoUk,
+    },
+    {
+      name: "Loredana Henderson, Founder, CEO",
+      organization: "UPTW USA LLC",
+      image: ceoUsa,
     },
     {
       name: "Venkata Reddy, Co-Founder, COO",
@@ -49,7 +49,7 @@ const Team = () => {
       image: irDirector,
     },
     {
-      name: "Director",
+      name: "Campodonico C. Grant, CEO, Australia",
       organization: "UPTW Australia LLC",
       image: directorAus,
     },
