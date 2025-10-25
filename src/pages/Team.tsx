@@ -17,17 +17,17 @@ const Team = () => {
       image: ceoDrc,
     },
     {
-      name: "CEO",
+      name: "Founder, CEO",
       organization: "UPTW USA LLC",
       image: ceoUsa,
     },
     {
-      name: "CEO",
+      name: "Co-Founder, CEO",
       organization: "UPTW UK LTD",
       image: ceoUk,
     },
     {
-      name: "COO",
+      name: "Co-Founder, COO",
       organization: "UPTW UK LTD",
       image: cooUk,
     },
@@ -56,7 +56,7 @@ const Team = () => {
         <section className="pt-32 pb-16 bg-gradient-to-b from-primary/10 to-background">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Leadership Team
+              (DRAFT)<br></br><br></br><br></br>Leadership Team
             </h1>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               Our global leadership team brings together expertise from across continents to drive our mission of empowering women and fostering sustainable development.

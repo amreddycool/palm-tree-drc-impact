@@ -23,7 +23,7 @@ const Footer = () => {
             Universal Palm Tree Women NGO, Kinshasa, DRC, Company Number: ****, Registered in ***
           </p> 
            <p className="text-sm opacity-75 mt-2">
-            UNIVERSAL PALM TREE WOMEN USA LLC, USA, Company Number: CP 575 G (Rev.7-20) Registered in Virginia, USA.
+            UNIVERSAL PALM TREE WOMEN USA LLC, Company Number: CP575G(Rev.7-20) Registered in Virginia, USA.
           </p> 
            <p className="text-sm opacity-75 mt-2">
             Universal Palm Tree Women Australia,  Company Number: ****, Registered in ***
