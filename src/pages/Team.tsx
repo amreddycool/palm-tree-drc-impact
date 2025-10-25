@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/card";
 import ceoDrc from "@/assets/team-ceo-drc.jpg";
+import directorDrc from "@/assets/team_director_drc.jpg";
 import ceoUsa from "@/assets/team-ceo-usa.jpg";
 import ceoUk from "@/assets/team-ceo-uk.jpg";
 import cooUk from "@/assets/team-coo-uk.jpg";
@@ -9,12 +10,18 @@ import salesDirector from "@/assets/team-sales-director.jpg";
 import irDirector from "@/assets/team-ir-director.jpg";
 import directorAus from "@/assets/team-director-aus.jpg";
 
+
 const Team = () => {
   const teamMembers = [
     {
       name: "Founder, CEO",
       organization: "UPTW DRC NGO",
       image: ceoDrc,
+    },
+    {
+      name: "Founder, CEO",
+      organization: "UPTW DRC NGO",
+      image: directorDrc,
     },
     {
       name: "Founder, CEO",

@@ -20,8 +20,11 @@ const Footer = () => {
         </div>
         <div>
            <p className="text-sm opacity-75 mt-2">
-            Universal Palm tree women business SAS, Company Number: ****, Registered in Kinshasa, DRC.
-          </p> 
+            Universal Palm tree women UPTW ONG, RCCM: KG/SEC.ADM/KAB/2023, Registered in Kinshasa, DRC.
+          </p>
+          <p className="text-sm opacity-75 mt-2">
+            Universal Palm tree women Business, RCCM: KNG/RCCM/22-B-02022, Registered in Kinshasa, DRC.
+          </p>
            <p className="text-sm opacity-75 mt-2">
             UNIVERSAL PALM TREE WOMEN USA LLC, Company Number: CP575G(Rev.7-20) Registered in Virginia, USA.
           </p> 
