@@ -15,7 +15,7 @@ import directorSA from "@/assets/team-director-sa.jpg";
 const Team = () => {
   const teamMembers = [
     {
-      name: "Dr Tiabakueno S. Élie, Founder, CEO",
+      name: "Dr Tiabakueno S. Élie, CEO",
       organization: "UPTW DRC SAS",
       image: ceoDrc,
     },
@@ -25,17 +25,17 @@ const Team = () => {
       image: directorDrc,
     },
     {
-      name: "Madhava Reddy, Founder, CEO",
+      name: "Madhava Reddy, CEO",
       organization: "UPTW UK LTD",
       image: ceoUk,
     },
     {
-      name: "Loredana Henderson, Founder, CEO",
+      name: "Loredana Henderson, CEO",
       organization: "UPTW USA LLC",
       image: ceoUsa,
     },
     {
-      name: "Venkata Reddy, Co-Founder, COO",
+      name: "Venkata Reddy, COO",
       organization: "UPTW UK LTD",
       image: cooUk,
     },
