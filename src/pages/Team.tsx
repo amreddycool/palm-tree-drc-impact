@@ -9,6 +9,7 @@ import cooUk from "@/assets/team-coo-uk.jpg";
 import salesDirector from "@/assets/team-sales-director.jpg";
 import irDirector from "@/assets/team-ir-director.jpg";
 import directorAus from "@/assets/team-director-aus.jpg";
+import directorSA from "@/assets/team-director-sa.jpg";
 
 
 const Team = () => {
@@ -47,6 +48,11 @@ const Team = () => {
       name: "Acting Investor Relations Director",
       organization: "UPTW UK LTD",
       image: irDirector,
+    },
+    {
+      name: "Nick kamanda, Director, South Africa",
+      organization: "UPTW South Africa LLC",
+      image: directorSA,
     },
     {
       name: "Campodonico C. Grant, CEO, Australia",

@@ -8,6 +8,13 @@ import heroImage from "@/assets/hero-image.jpg";
 import speakerDrcAmbassador from "@/assets/speaker-drc-ambassador.jpg";
 import speakerUkAmbassador from "@/assets/speaker-uk-ambassador.jpg";
 import speakerForeignMinister from "@/assets/speaker-foreign-minister.jpg";
+import amazon from "@/assets/sponsors/amazon.png";
+import nvidia from "@/assets/sponsors/nvidia.png";
+import x from "@/assets/sponsors/x.png";
+import openai from "@/assets/sponsors/openai.png";
+import google from "@/assets/sponsors/google.png";
+import spacex from "@/assets/sponsors/spacex.png";
+
 
 const Events = () => {
   const navigate = useNavigate();
@@ -56,6 +63,14 @@ const Events = () => {
     { icon: "🏥", title: "Healthcare", description: "Healthcare investment and services" },
   ];
 
+  const goldSponsors = [
+    { name: "AgriCo", logo: amazon },
+    { name: "BlueFisher", logo: google },
+    { name: "Minerals Ltd", logo: x },
+    { name: "FinBank", logo: openai },
+    { name: "EduRoots", logo: nvidia },
+    { name: "HealthWorks", logo: spacex },
+  ];
   return (
     <div className="min-h-screen">
       <Header />
@@ -158,6 +173,46 @@ const Events = () => {
           </div>
         </div>
       </section>
+      
+      {/* Our Dimond Sponsors */}
+      <section className="py-12 bg-background">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-primary text-center">Dimond Sponsor</h2>
+
+          <div className="max-w-6xl mx-auto">
+                <div className="flex items-center justify-center p-4 bg-white/50 rounded-md shadow-sm">
+                  <img
+                    src={spacex}
+                    alt="spacex"
+                    className="mx-auto h-45 object-contain"
+                  />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Gold Sponsors */}
+      <section className="py-12 bg-background">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-center">Platinum Sponsors</h2>
+
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 items-center">
+              {goldSponsors.map((s, i) => (
+                <div key={i} className="flex items-center justify-center p-4 bg-white/50 rounded-md shadow-sm">
+                  <img
+                    src={s.logo}
+                    alt={s.name}
+                    className="mx-auto h-16 object-contain"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
 
       {/* Focus Areas */}
       <section className="py-16 bg-background">
@@ -224,6 +279,29 @@ const Events = () => {
         </div>
       </section>
 
+      {/* Our Gold Sponsors */}
+      <section className="py-12 bg-background">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-center">Gold Sponsors</h2>
+
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 items-center">
+              {goldSponsors.map((s, i) => (
+                <div key={i} className="flex items-center justify-center p-4 bg-white/50 rounded-md shadow-sm">
+                  <img
+                    src={s.logo}
+                    alt={s.name}
+                    className="mx-auto h-16 object-contain"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+
       {/* Sponsorship */}
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
@@ -265,6 +343,27 @@ const Events = () => {
                     </Button>
                   </CardContent>
                 </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Silver Sponsors */}
+      <section className="py-12 bg-background">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-center">Silver Sponsors</h2>
+
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 items-center">
+              {goldSponsors.map((s, i) => (
+                <div key={i} className="flex items-center justify-center p-4 bg-white/50 rounded-md shadow-sm">
+                  <img
+                    src={s.logo}
+                    alt={s.name}
+                    className="mx-auto h-16 object-contain"
+                  />
+                </div>
               ))}
             </div>
           </div>
