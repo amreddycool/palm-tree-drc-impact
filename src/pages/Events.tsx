@@ -80,7 +80,7 @@ const Events = () => {
       <section className="bg-gradient-to-br from-primary to-primary/80 text-primary-foreground py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">(DRAFT)<br></br><br></br><br></br>Palm Tree Conference London</h1>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">Palm Tree Conference London</h1>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
               Connecting Global Trade & Investment Opportunities
             </p>
@@ -91,7 +91,7 @@ const Events = () => {
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="w-5 h-5" />
-                <span>Hotel Radisson London</span>
+                <span>Hotel RadissonBlu, Heathrow, London</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-5 h-5" />
