@@ -87,7 +87,7 @@ const Events = () => {
             <div className="flex flex-wrap justify-center gap-6 text-lg">
               <div className="flex items-center gap-2">
                 <Calendar className="w-5 h-5" />
-                <span>10-12 December 2025</span>
+                <span>December 2025</span>
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="w-5 h-5" />
