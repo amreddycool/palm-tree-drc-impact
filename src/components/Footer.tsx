@@ -15,7 +15,7 @@ const Footer = () => {
             In partnership with Universal Palm Tree Women NGO and DRC Government
           </p>
           <p className="text-sm opacity-75 mt-2">
-            <a href="https://uptw1.org" className="underline hover:text-secondary transition-colors">https://uptw1.org</a>
+            <a href="https://universalpalmtreewomen.org" className="underline hover:text-secondary transition-colors">https://universalpalmtreewomen.org</a>
          </p>
         </div>
         <div>
