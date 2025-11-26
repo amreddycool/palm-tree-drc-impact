@@ -4,6 +4,8 @@ import miningImg from "@/assets/mining.jpg";
 import fisheriesImg from "@/assets/fisheries.jpg";
 import healthcareImg from "@/assets/healthcare.jpg";
 import financeImg from "@/assets/finance.jpg";
+import telecommunicationsImg from "@/assets/telecommunications.jpg";
+import logisticsImg from "@/assets/logistics.jpg";
 
 const services = [
   {
@@ -30,6 +32,16 @@ const services = [
     title: "Finance & Banking",
     description: "Financial services and banking solutions that empower women entrepreneurs and small business owners.",
     image: financeImg,
+  },
+  {
+    title: "Telecommunications",
+    description: "Modern telecommunications infrastructure and connectivity solutions that bridge the digital divide and enable communication.",
+    image: telecommunicationsImg,
+  },
+  {
+    title: "Logistics & Transportation",
+    description: "Efficient logistics and transportation networks that facilitate trade, improve supply chains, and connect communities.",
+    image: logisticsImg,
   },
 ];
 
