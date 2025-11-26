@@ -1,7 +1,14 @@
-import { Menu, X } from "lucide-react";
+import { Menu, X, Globe } from "lucide-react";
 import { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import logo from "@/assets/logo.png";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Button } from "@/components/ui/button";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,6 +46,15 @@ const Header = () => {
     { label: "Team", path: "/team" },
   ];
 
+  const countries = [
+    { label: "USA", path: "/countries/usa" },
+    { label: "UK", path: "/countries/uk" },
+    { label: "DRC", path: "/countries/drc" },
+    { label: "South Africa", path: "/countries/south-africa" },
+    { label: "Australia", path: "/countries/australia" },
+    { label: "India", path: "/countries/india" },
+  ];
+
   return (
     <header className="bg-card/80 border-b border-border sticky top-0 z-50 backdrop-blur-md shadow-sm">
       <div className="container mx-auto px-4 py-3">
@@ -72,6 +88,25 @@ const Header = () => {
                 {link.label}
               </button>
             ))}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="outline" size="sm" className="gap-2">
+                  <Globe className="h-4 w-4" />
+                  Countries
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="w-48 bg-card z-50">
+                {countries.map((country) => (
+                  <DropdownMenuItem
+                    key={country.path}
+                    onClick={() => handleNavigation(country.path)}
+                    className="cursor-pointer"
+                  >
+                    {country.label}
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -106,6 +141,18 @@ const Header = () => {
                   {link.label}
                 </button>
               ))}
+              <div className="pt-2 border-t border-border">
+                <p className="text-sm font-semibold text-muted-foreground mb-2">Countries</p>
+                {countries.map((country) => (
+                  <button
+                    key={country.path}
+                    onClick={() => handleNavigation(country.path)}
+                    className="text-foreground hover:text-primary transition-colors font-medium text-left block w-full py-2"
+                  >
+                    {country.label}
+                  </button>
+                ))}
+              </div>
             </div>
           </nav>
         )}
