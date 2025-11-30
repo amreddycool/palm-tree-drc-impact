@@ -6,6 +6,7 @@ import healthcareImg from "@/assets/healthcare.jpg";
 import financeImg from "@/assets/finance.jpg";
 import telecommunicationsImg from "@/assets/telecommunications.jpg";
 import logisticsImg from "@/assets/logistics.jpg";
+import importRetailImg from "@/assets/import-retail.jpg";
 
 const services = [
   {
@@ -42,6 +43,11 @@ const services = [
     title: "Logistics & Transportation",
     description: "Efficient logistics and transportation networks that facilitate trade, improve supply chains, and connect communities.",
     image: logisticsImg,
+  },
+  {
+    title: "Import and Retail",
+    description: "Global import operations and retail distribution networks connecting international suppliers with local markets for sustainable trade.",
+    image: importRetailImg,
   },
 ];
 
