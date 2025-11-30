@@ -7,6 +7,7 @@ import financeImg from "@/assets/finance.jpg";
 import telecommunicationsImg from "@/assets/telecommunications.jpg";
 import logisticsImg from "@/assets/logistics.jpg";
 import importRetailImg from "@/assets/import-retail.jpg";
+import infrastructureImg from "@/assets/infrastructure.jpg";
 
 const services = [
   {
@@ -48,6 +49,11 @@ const services = [
     title: "Import and Retail",
     description: "Global import operations and retail distribution networks connecting international suppliers with local markets for sustainable trade.",
     image: importRetailImg,
+  },
+  {
+    title: "Infrastructure Development",
+    description: "Comprehensive construction and infrastructure projects including roads, bridges, buildings, and utilities to support economic growth and community development.",
+    image: infrastructureImg,
   },
 ];
 
